@@ -24,9 +24,18 @@
             <td><input type="text" th:field="*{lastName}"></td>
         </tr>
         <tr>
+            <td>Province</td>
+            <td>
+                <select  th:field="*{province}">
+                    <option th:each="p: ${provinces}" th:value="${p.id}" th:text="${p.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
             <td></td>
             <td><input type="submit" value="Save"></td>
         </tr>
+
     </table>
 </form>
 </body>
